@@ -11,25 +11,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+<style>
+    /* REMOVED: .bg-custom background-color to let your style.css gradient work */
+    
+    .btn-home {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: white;
+        margin-right: 15px;
+        padding: 5px 15px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all 0.2s;
+    }
+
+    .btn-home:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-color: white;
+    }
+
+    .changelog-box {
+      background: rgba(26, 29, 36, 0.8);
+      border-left: 4px solid #321bb6;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 30px;
+      color: #ffffff;
+    }
+    .text-muted-custom { color: #a1a1a6; }
+    .badge-update { background-color: #4744ef; margin-right: 10px; }
+</style>
 </head>
 
 <body>
   <div class="overlay">
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-custom">
-      <div class="container">
-        <span class="navbar-brand mb-0 h1 fw-bold"><span style="color: #ffec0d">Los Santos Customs</span></span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+    <nav class="navbar navbar-dark bg-custom">
+      <div class="container d-flex justify-content-start align-items-center">
+        <a href="../index.html" class="btn btn-home"><i class="fas fa-arrow-left me-2"></i>Home</a>
+        
+        <span class="navbar-brand mb-0 h1 fw-bold"><span style="color: #d9d8d4">Weazel</span><span
+            style="color: #d81f26;">News</span></span>        
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <span class="nav-link active" href="./index.html">Header</span>
-            <a class="nav-link" href="./title.html">Title</a>
-			<a class="nav-link" href="./signature.html">Signature</a>
-            <!-- Credits Span -->
-            <span class="nav-link credits">Credits : Paradise RP (Original:$tax#6060)</span>
+            <a class="nav-link" href="./weazel.html">WeazelNews Home</a>
+            <a class="nav-link" href="./title.html">Title Creator</a>
+            <a class="nav-link" href="./signature.html">Signature Creator</a>
+            <a class="nav-link active" href="./header.html">Header Creator</a>
+            <a class="nav-link" href="../404.html">Document Creator</a>
+            <span class="nav-link credits">Credits : Paradise RP [Original $tax#6060]</span>
           </div>
         </div>
       </div>

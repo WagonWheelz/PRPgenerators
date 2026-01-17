@@ -33,14 +33,14 @@
 
     .changelog-box {
       background: rgba(26, 29, 36, 0.8);
-      border-left: 4px solid #ef4444;
+      border-left: 4px solid #321bb6;
       border-radius: 8px;
       padding: 20px;
       margin-top: 30px;
       color: #ffffff;
     }
     .text-muted-custom { color: #a1a1a6; }
-    .badge-update { background-color: #ef4444; margin-right: 10px; }
+    .badge-update { background-color: #4744ef; margin-right: 10px; }
 </style>
 </head>
 
@@ -50,8 +50,8 @@
       <div class="container d-flex justify-content-start align-items-center">
         <a href="../index.html" class="btn btn-home"><i class="fas fa-arrow-left me-2"></i>Home</a>
         
-        <span class="navbar-brand mb-0 h1 fw-bold"><span style="color: #ffec0d">Los Santos Customs</span></span>
-        
+        <span class="navbar-brand mb-0 h1 fw-bold"><span style="color: #d9d8d4">Weazel</span><span
+            style="color: #d81f26;">News</span></span>        
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -59,56 +59,64 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="./lsc.html">LSC Home</a>
+            <a class="nav-link active" href="./weazel.html">WeazelNews Home</a>
             <a class="nav-link" href="./title.html">Title Creator</a>
-            <a class="nav-link active" href="./signature.html">Signature Creator</a>
+            <a class="nav-link" href="./signature.html">Signature Creator</a>
             <a class="nav-link" href="./header.html">Header Creator</a>
-            <a class="nav-link" href="./documents.html">Document Creator</a>
+            <a class="nav-link" href="../404.html">Document Creator</a>
             <span class="nav-link credits">Credits : Paradise RP [Original $tax#6060]</span>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container ">
-      <!-- <section class="d-flex justify-content-around ranks-section"> -->
-      <div class="row justify-content-between mt-3 px-2 ranks">
-      </div>
-      <!-- </section> -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center text-white">
+          <h1 class="display-4 fw-bold" style="font-family: 'Source Sans Pro', sans-serif;">WELCOME TO WEAZEL NEWS</h1>
+          <p class="lead text-muted-custom">"Confirming your prejudices" Since 2020.</p>
+          <hr class="my-4 border-secondary">
+          
+          <div class="text-start">
+            <h3>Information</h3>
+            <p>This portal allows Weazel NEws Employees to generate uniform forum signatures and titles. Please ensure you use your correct role as registered in the department roster. THIS WEBSITE IS OOC</p>
+            
+            <div class="row mt-4">
+              <div class="col-sm-6">
+                <h5><i class="fas fa-file-image me-2"></i>Headers</h5>
+                <p class="small text-muted-custom">Generate headers for news reports and posts.</p>
+              </div>
+              <div class="col-sm-6">
+                <h5><i class="fas fa-id-card me-2"></i>Signatures</h5>
+                <p class="small text-muted-custom">Create personalized footer signatures for your profile.</p>
+              </div>
+        <!--  <div class="col-sm-6">
+                <h5><i class="fas fa-receipt me-2"></i>Work orders</h5>
+                <p class="small text-muted-custom">Create custom receipts and work orders.</p>
+              </div> !-->
+            </div>
 
-      <!-- Canvas -->
-      <div>
-        <canvas class="canvas my-5"></canvas>
-        <img class="canvas-image" src="./images/signature.png" alt="">
-      </div>
- 
-      <!-- Inputs -->
-      <form class="inputs my- form-group d-flex justify-content-center align-content-center flex-column text-sm-left">
-        <div class="row">
-          <div class="col-6 ">
-            <label>Name</label>
-            <input type="text" class="form-control" name='fullname' spellcheck="false">
-          </div>
-          <div class="col-6">
-            <label>Rank</label>
-            <input type="text" class="form-control" name='badge' spellcheck="false">
+            <div class="changelog-box">
+              <h4 class="mb-3">Recent Updates</h4>
+              
+              <div class="mb-3">
+                <span class="badge badge-update">v1.0</span> <small class="text-muted-custom">January 2026</small>
+                <ul class="mt-2">
+                  <li>Added initial support for existing Weazel News signatures.</li>
+                  <li>Fixed font-scaling issues on mobile devices.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <label>Division</label>
-        <input type="text" class="form-control" name='line1' spellcheck="false">
-        <label>Division</label>
-        <input type="text" class="form-control" name="line2" spellcheck="false">
-      </form>
-
+      </div>
     </div>
   </div>
 
-
-  <script src="./js/signature.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </body>
 
 </html>

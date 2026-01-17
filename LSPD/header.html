@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Los Santos Customs</title>
-  <link rel="icon" href="./images/icon.png" type="image">
+  <title>San Andreas Medical Services</title>
+  <link rel="icon" href="./images/favicon.png" type="image">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -50,7 +50,7 @@
       <div class="container d-flex justify-content-start align-items-center">
         <a href="../index.html" class="btn btn-home"><i class="fas fa-arrow-left me-2"></i>Home</a>
         
-        <span class="navbar-brand mb-0 h1 fw-bold"><span style="color: #ffec0d">Los Santos Customs</span></span>
+        <span class="navbar-brand mb-0 h1 fw-bold">San Andreas Medical Services</span>
         
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,11 +59,11 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="./lsc.html">LSC Home</a>
+            <a class="nav-link" href="./sams.html">SAMS Home</a>
             <a class="nav-link" href="./title.html">Title Creator</a>
-            <a class="nav-link active" href="./signature.html">Signature Creator</a>
-            <a class="nav-link" href="./header.html">Header Creator</a>
-            <a class="nav-link" href="./documents.html">Document Creator</a>
+            <a class="nav-link" href="./signature.html">Signature Creator</a>
+            <a class="nav-link active" href="./header.html">Header Creator</a>
+            <a class="nav-link" href="./certificate.html">Certificate Creator</a>
             <span class="nav-link credits">Credits : Paradise RP [Original $tax#6060]</span>
           </div>
         </div>
@@ -71,41 +71,23 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container ">
-      <!-- <section class="d-flex justify-content-around ranks-section"> -->
-      <div class="row justify-content-between mt-3 px-2 ranks">
-      </div>
-      <!-- </section> -->
-
-      <!-- Canvas -->
+    <div class="container">
       <div>
         <canvas class="canvas my-5"></canvas>
-        <img class="canvas-image" src="./images/signature.png" alt="">
+        <img class="canvas-image" src="./images/header.png" alt="">
       </div>
- 
-      <!-- Inputs -->
-      <form class="inputs my- form-group d-flex justify-content-center align-content-center flex-column text-sm-left">
-        <div class="row">
-          <div class="col-6 ">
-            <label>Name</label>
-            <input type="text" class="form-control" name='fullname' spellcheck="false">
-          </div>
-          <div class="col-6">
-            <label>Rank</label>
-            <input type="text" class="form-control" name='badge' spellcheck="false">
-          </div>
-        </div>
-        <label>Division</label>
-        <input type="text" class="form-control" name='line1' spellcheck="false">
-        <label>Division</label>
-        <input type="text" class="form-control" name="line2" spellcheck="false">
-      </form>
+      <div class="inputs my-4 form-group d-flex justify-content-center align-content-center flex-column text-center">
+        <label>Header</label>
+        <input type="text" class="form-control inputForm1" spellcheck="false">
+        <label>Subheader (Optional)</label>
+        <input type="text" class="form-control inputForm2" spellcheck="false">
+      </div>
 
     </div>
   </div>
 
 
-  <script src="./js/signature.js"></script>
+  <script src="./js/header.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
