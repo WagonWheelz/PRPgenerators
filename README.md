@@ -15,5 +15,5 @@ Credits:
 - ParadiseRP | Logo, Idea
 
 AI Discolsure:
-Generative AI was used in the creation of this project totling approximetly "32%" of code. Code generated entierly by AI was then manually reviewed to understand it's function. The following items were generated enmtierly by AI:
+Generative AI was used in the creation of this project totling approximetly "15%" of code. Code generated entierly by AI was then manually reviewed to understand it's function. The following items were generated enmtierly by AI:
 - 404 Page | I was lazy
