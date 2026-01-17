@@ -24,6 +24,20 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Papernotes';
+  src: url('./fonts/Papernotes.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Papernotes';
+  src: url('./fonts/Papernotes-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   background: linear-gradient(90deg, #6a0500, #6a0500, #6a0500);
   background-size: 600% 600%;
