@@ -5,8 +5,23 @@
 }
 @font-face {
   font-family: 'BTBrikRegular';
-  src: url('BTBrikRegular.otf');
+  src: url('./fonts/BTBrikRegular.otf');
   font-weight: normal;
+  font-style: normal;
+}
+/* Register Regular Carlito */
+@font-face {
+  font-family: 'Carlito';
+  src: url('./fonts/Carlito-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Register Bold Carlito */
+@font-face {
+  font-family: 'Carlito';
+  src: url('./fonts/Carlito-Bold.ttf');
+  font-weight: bold;
   font-style: normal;
 }
 body {
