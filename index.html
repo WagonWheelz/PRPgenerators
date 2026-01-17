@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Signature Creator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CORE STYLES --- */
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #1a1d24;
+            --text-main: #ffffff;
+            --text-black: #000000;
+            --text-sub: #a1a1a6;
+            --accent-police: #3b82f6; /* Blue */
+            --accent-ems: #ef4444;    /* Red */
+            --accent-doc: #10b981;    /* Green */
+            --accent-bcso: #d4af37;   /* Gold/Tan for Sheriff */
+            --accent-doj: #9ca3af;    /* Silver/Grey */
+            --accent-lsc: #1b165c;    /* LSC Purple */ 
+            --accent-weazel: #ffffff;    /* Plain */ 
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            padding: 40px 20px 40px;
+            max-width: 800px;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 250px; /* Increased slightly for the Paradise RP logo */
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-sub);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* --- CARD GRID --- */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            margin: 10px 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        p.desc {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        p.desc-black {
+            color: var(--text-black);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+            color: white;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-black {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+            color: rgb(0, 0, 0);
+        }        
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* --- FACTION SPECIFIC STYLES --- */
+        .card.police { border-top: 4px solid var(--accent-police); }
+        .card.police .icon-box { color: var(--accent-police); }
+        .card.police .btn { background-color: var(--accent-police); }
+
+        .card.ems { border-top: 4px solid var(--accent-ems); }
+        .card.ems .icon-box { color: var(--accent-ems); }
+        .card.ems .btn { background-color: var(--accent-ems); }
+
+        .card.doj { border-top: 4px solid var(--accent-doj); }
+        .card.doj .icon-box { color: var(--accent-doj); }
+        .card.doj .btn { background-color: var(--accent-doj); }
+
+        .card.bcso { border-top: 4px solid var(--accent-bcso); }
+        .card.bcso .icon-box { color: var(--accent-bcso); }
+        .card.bcso .btn { background-color: var(--accent-bcso); }
+
+        .card.doc { border-top: 4px solid var(--accent-doc); }
+        .card.doc .icon-box { color: var(--accent-doc); }
+        .card.doc .btn { background-color: var(--accent-doc); }
+
+        .card.lsc { border-top: 4px solid var(--accent-lsc); }
+        .card.lsc .icon-box { color: var(--accent-lsc); }
+        .card.lsc .btn { background-color: var(--accent-lsc); }
+
+        .card.weazel { border-top: 4px solid var(--accent-weazel); }
+        .card.weazel .icon-box { color: var(--accent-weazel); }
+        .card.weazel .btn-black { background-color: var(--accent-weazel); }
+
+        /* --- FOOTER --- */
+        footer {
+            width: 100%;
+            background-color: #16191f;
+            margin-top: auto;
+            padding: 40px 0;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+
+        .footer-links i {
+            margin-right: 8px;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://forum.playgta5rp.com/data/assets/logo/ParadiseRoleplay1white.png" alt="Paradise Roleplay Logo">
+        </div>
+        <h1>Signature Creator</h1>
+        <p class="subtitle">Select your faction to generate your official forum signature.</p>
+    </header>
+
+    <div class="container">
+        <div class="card police">
+            <div>
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h2>LSPD</h2>
+                <p class="desc">Create official LSPD signatures. Customize badge numbers, ranks, and unit callsigns.</p>
+            </div>
+            <a href="./police_project/index.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card ems">
+            <div>
+                <div class="icon-box"><i class="fas fa-ambulance"></i></div>
+                <h2>SAMS</h2>
+                <p class="desc">Design signatures for SAFD. Includes templates for Paramedics and Firefighters.</p>
+            </div>
+            <a href="SAMS\title.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card bcso">
+            <div>
+                <div class="icon-box"><i class="fas fa-star"></i></div>
+                <h2>BCSO</h2>
+                <p class="desc">Official signatures and identity cards for the Blaine County Sheriff's Office.</p>
+            </div>
+            <a href="./bcso_project/index.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card doj">
+            <div>
+                <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+                <h2>GOV.</h2>
+                <p class="desc">Signatures and official documentation for the Department Of Justice.</p>
+            </div>
+            <a href="./doj_project/index.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card doc">
+            <div>
+                <div class="icon-box"><i class="fas fa-lock"></i></div>
+                <h2>DOC</h2>
+                <p class="desc">Signatures and official personnel documents for the Department of Corrections.</p>
+            </div>
+            <a href="./doc_project/index.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card lsc">
+            <div>
+                <div class="icon-box"><i class="fas fa-tools"></i></div>
+                <h2>L.S. Customs</h2>
+                <p class="desc">Signatures and service documents for Los Santos Customs employees.</p>
+            </div>
+            <a href="./lsc_project/index.html" class="btn">Create Signature</a>
+        </div>
+
+        <div class="card weazel">
+            <div>
+                <div class="icon-box"><i class="fas fa-newspaper"></i></div>
+                <h2>Weazel News</h2>
+                <p class="desc">Signatures and documents for weazel news employees.</p>
+            </div>
+            <a href="./lsc_project/index.html" class="btn-black">Create Signature</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://example.com/discord"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://example.com/forums"><i class="fas fa-comments"></i> Community Forums</a>
+                <a href="https://example.com/rules"><i class="fas fa-gavel"></i> Server Rules</a>
+                <a href="https://example.com/support"><i class="fas fa-life-ring"></i> Support</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Developed by WagonWheel / WagonWheelz. Licensed under GPL v2.<br>
+                For the ParadiseRP community.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
