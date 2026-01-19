@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* --- FONTS --- */
+@font-face {
+  font-family: 'BTBrikRegular';
+  src: url('./fonts/BTBrikRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: url('./fonts/Carlito-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: url('./fonts/Carlito-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Papernotes';
+  src: url('./fonts/Papernotes.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Papernotes';
+  src: url('./fonts/Papernotes-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* --- BODY & ANIMATION --- */
+body {
+  background: linear-gradient(90deg, #6a0500, #6a0500, #6a0500);
+  background-size: 600% 600%;
+  animation: AnimationName 5s ease infinite;
+  overflow: hidden; /* Prevent double scrollbars, let overlay handle scrolling */
+}
+
+@keyframes AnimationName {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-custom {
+  background: linear-gradient(
+    to right,
+    rgba(103, 5, 0, 0.8),
+    rgba(214, 20, 20, 0.1)
+  );
+}
+
+.overlay {
+  background-image: url('./images/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: auto; /* This makes the overlay scrollable */
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+}
+.canvas-image,
+.logo-image {
+  width: 100%;
+  display: none;
+}
+
+/* --- INPUTS --- */
+input[type='text'] {
+  background: #dedede;
+  text-transform: uppercase;
+  font-family: BTBrikRegular;
+  text-align: center;
+  letter-spacing: 0.7px;
+  font-size: 1.4rem;
+}
+input[type='text']:focus {
+  background: #dedede;
+}
+.inputs label {
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 1.9rem;
+}
+.credits {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.btn-gradient {
+  background-image: linear-gradient(
+    rgba(213, 31, 38, 0.5),
+    rgba(103, 5, 0, 0.5)
+  );
+  color: #fbf3bb;
+  width: 30%;
+  margin-top: 0.7rem;
+}
+.btn-active {
+  color: #fbf3bb;
+  font-weight: bold;
+}
+
+/* --- NEW TOOLBAR STYLES (Replacement for Nav) --- */
+.sams-toolbar-container {
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  background: rgba(26, 29, 36, 0.95); /* Dark background matching changelog */
+  border-bottom: 4px solid #b91c1c; /* Dark Red border */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 80px; 
+  backdrop-filter: blur(5px);
+  width: 100%;
+}
+
+/* Brand Section (Left side) */
+.toolbar-brand {
+  min-width: 180px;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+
+/* The Scrollable Area (Right side) */
+.toolbar-scroll {
+  flex-grow: 1;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.toolbar-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Individual Navigation Buttons */
+.sams-toolbar-container .nav-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1a6;
+  height: 80px;
+  min-width: 90px;
+  border-radius: 0;
+  border-right: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.sams-toolbar-container .nav-link i {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.sams-toolbar-container .nav-link span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Hover State */
+.sams-toolbar-container .nav-link:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+/* Active State (Current Page) */
+.sams-toolbar-container .nav-link.active-app {
+  background: linear-gradient(to bottom, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.0));
+  color: #fff;
+  border-bottom: 4px solid #ef4444; 
+  margin-bottom: -4px; 
+}
+
+/* --- MOBILE & RESPONSIVE --- */
+@media (max-width: 768px) {
+  input[type='text'] {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .inputs label {
+    font-size: 1.4rem;
+  }
+  .btn-gradient {
+    width: 30%;
+    margin-top: 0.4rem;
+  }
+  
+  /* Toolbar Mobile Adjustments */
+  .sams-toolbar-container {
+    flex-direction: column;
+    height: auto;
+    position: relative; /* On mobile, let it scroll naturally or keep sticky */
+  }
+  .toolbar-brand {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    height: 60px;
+  }
+  .toolbar-scroll {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .sams-toolbar-container .nav-link {
+    height: 70px; 
+    min-width: 80px;
+  }
+}
